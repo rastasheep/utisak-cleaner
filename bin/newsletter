@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require_relative "../lib/campaign/factory"
+
+campaign = CampaignFactory.new
+
+begin
+  campaign.execute
+rescue => e
+  STDERR.puts e.message
+  exit 1
+end
