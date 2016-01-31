@@ -9,7 +9,7 @@ engine = 'utisak'
 document_type = 'posts'
 query = ''
 per_page = 100
-older_than = Date.today - 15 # 15 days
+older_than = Date.today - 5 # 5 days
 
 current_page = 1
 external_ids = []
