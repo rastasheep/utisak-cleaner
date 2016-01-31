@@ -3,7 +3,7 @@ require_relative 'base'
 module Campaign
   class Weekly < Base
     def segment_id
-      12349
+      15437
     end
 
     def subject
