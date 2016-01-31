@@ -5,8 +5,9 @@ require_relative "article"
 class Articles
   UTISAK_API="https://api.utisak.com"
 
-  def initialize(range)
-    @range = range
+  def initialize(start_date, end_date)
+    @start_date = start_date
+    @end_date = end_date
     @articles = fetch
   end
 
@@ -21,7 +22,7 @@ class Articles
   end
 
   def fetch
-    response = connection.get "/vesti"
+    response = connection.get "/vesti", {"start-date" => @start_date, "end-date" => @end_date}
     posts = JSON.parse(response.body)["posts"]
     posts.map{|post| Article.new(post)}
   end

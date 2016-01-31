@@ -1,9 +1,11 @@
 require_relative 'daily'
 require_relative 'weekly'
 
-class CampaignFactory
+class Campaign::Factory
   DAILY = "daily"
   WEEKLY = "weekly"
+
+  attr_reader :campaign
 
   def initialize
     @campaign = campaign_class.new(:debug => debug, :segment_id => segment_id)

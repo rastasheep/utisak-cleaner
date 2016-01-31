@@ -2,7 +2,7 @@
 
 require_relative "../lib/campaign/factory"
 
-campaign = CampaignFactory.new
+campaign = Campaign::Factory.new
 
 begin
   campaign.execute

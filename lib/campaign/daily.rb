@@ -11,7 +11,7 @@ module Campaign
     end
 
     def articles_range
-
+      return fortmated_date(Date.today - 1), fortmated_date(Date.today)
     end
   end
 end

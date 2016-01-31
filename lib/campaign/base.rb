@@ -73,7 +73,7 @@ module Campaign
     private
 
     def articles
-      @articles ||= Articles.new(articles_range)
+      @articles ||= Articles.new(*articles_range)
     end
 
     def gibbon
@@ -94,6 +94,10 @@ module Campaign
 
     def pretty_print(title, data)
       puts "#{title}:\n #{JSON.pretty_generate(data)}"
+    end
+
+    def fortmated_date(date)
+      date.iso8601
     end
   end
 end
