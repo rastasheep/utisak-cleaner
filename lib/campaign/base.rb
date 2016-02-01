@@ -12,7 +12,7 @@ module Campaign
 
     def initialize(options = {})
       @debug = options.fetch(:debug, false)
-      @segment_id = options.fetch(:segment_id, segment_id)
+      @segment_id = options[:segment_id] || segment_id
     end
 
     def execute
